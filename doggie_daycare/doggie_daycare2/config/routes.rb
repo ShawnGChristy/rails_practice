@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :dogs, only: [:index, :new, :create]
+
   get 'pages/index'
 
   get '/about' => 'pages#about'
